@@ -1,0 +1,72 @@
+#include<stdio.h>
+int main()
+{
+	int a,b,i;
+	printf("   1  |  2   |  3   \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("  4   |  5   |   6  \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("    7 |   8  |   9  \n");
+	
+	do{
+	   	
+	
+	printf("Player 1: 'x'\nPlayer 2: 'o'\n");// player 1 choice
+	printf("Player 1: ");
+	scanf("%d",&a);
+	
+	switch(a){
+	  case 1:	
+	
+  printf("\n   x  |  2   |  3   \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("  4   |  5   |   6  \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("    7 |   8  |   9  \n");
+	printf("\n");
+	break;
+	
+	case 2:
+  printf("\n   1  |  x   |  3   \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("  4   |  5   |   6  \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("    7 |   8  |   9  \n");
+	printf("\n");
+	
+}
+	printf("\nPlayer 2: "); // player 2 choice
+	scanf("%d",&b);
+	
+	switch(b){
+	   case 1:	
+	
+  printf("\n   o  |  2   |  3   \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("  4   |  5   |   6  \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("    7 |   8  |   9  \n");
+	printf("\n");
+	break;
+	
+	case 2:
+  printf("\n   1  |  o   |  3   \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("  4   |  5   |   6  \n");
+	printf("______|______|______\n");
+	printf("      |      |      \n");
+	printf("    7 |   8  |   9  \n");
+	printf("\n");
+}
+	i++;
+     }while(i<=9);
+}
