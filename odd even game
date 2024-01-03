@@ -162,7 +162,7 @@ int main()
 				}
 				SumComp=SumComp+arr[num];
 				if(SumComp>SumPlayer){
-					printf("\n                                Player runs: %d Computer runs: %d  \n                            Computer Won!!!!\n");              //to check the runs by computer and the player
+					printf("\n                                Player runs: %d Computer runs: %d  \n                            Computer Won!!!!\n",SumPlayer,SumComp);              //to check the runs by computer and the player
 			        break;
 				}
 				
