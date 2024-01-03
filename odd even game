@@ -19,7 +19,7 @@ int main()
 	int ar[]={1,2,3,4,5,6,7,8,9,1};
 	int arr[]={1,2,3,4,5,6,10.20,25,40};
 	printf("               Welcome          \n            Odd Even Game");
-	printf("Are you ready to play?:\nPress '1' to Play from numbers 1 to 5\nPress '2' to Play form the number 1 to 9\nPress '3' to play full game\nPress '4' to know the basics of the game\nPress '5' to quit the game");
+	printf("Are you ready to play?:\nPress '1' to Play from numbers 1 to 5\nPress '2' to Play form the number 1 to 9\nPress '3' to play full game.  case 3 is Under development plz play case 1 or 2 \nPress '4' to know the basics of the game\nPress '5' to quit the game");
 	scanf("%d",&choice);
 	
 	switch(choice)
@@ -121,7 +121,7 @@ int main()
 			printf("                                          PLAYING ODD EVEN GAME...\nYour turn is to bat\n");
 			while(1)
 			{
-				printf("Enter a number from (1,2,3,4,5,6,10,20,25,40) case 3 is Under development plz play case 1 or 2");
+				printf("Enter a number from (1,2,3,4,5,6,10,20,25,40) ");
 				scanf("%d",&player);
 				srand(time(NULL));
 				num=rand()%10;
