@@ -14,12 +14,13 @@
 }*/
 int main()
 {
+	
 	int SumPlayer=0,SumComp=0,player,choice,num;
 	int a[]={1,2,3,4,5,1,2,3,4,5};
 	int ar[]={1,2,3,4,5,6,7,8,9,1};
-	int arr[]={1,2,3,4,5,6,10.20,25,40};
-	printf("               Welcome          \n            Odd Even Game");
-	printf("Are you ready to play?:\nPress '1' to Play from numbers 1 to 5\nPress '2' to Play form the number 1 to 9\nPress '3' to play full game.  case 3 is Under development plz play case 1 or 2 \nPress '4' to know the basics of the game\nPress '5' to quit the game");
+	int arr[]={1,2,3,4,5,6,10,20,25,40};
+	printf("\n               Welcome          \n            Odd Even Game");
+	printf("\nAre you ready to play?:\nPress '1' to Play from numbers 1 to 5\nPress '2' to Play form the number 1 to 9\nPress '3' to play full game\nPress '4' to know the basics of the game\nPress '5' to quit the game");
 	scanf("%d",&choice);
 	
 	switch(choice)
@@ -58,12 +59,15 @@ int main()
 				num=rand()%10;
 				printf("\nYou: %d , Computrer: %d\n",player,a[num]);
 				if(player==a[num]){
-					printf("Computer OUT!!    Player Won!!");
+					printf("Computer OUT!!");
+					printf("\n                         Player runs: %d  Computer runs: %d",SumPlayer,SumComp);
+					printf("\n                                    Congratulations YOU WON!!!          ");
 					break;
 				}
 				SumComp=SumComp+a[num];
-				if(SumComp>SumPlayer){
-					printf("Computer Won!!!!\n");              //to check the runs by computer and the player
+				if(SumComp>SumPlayer){                //to check the runs by computer and the player
+					printf("\n                         Player runs: %d  Computer runs: %d",SumPlayer,SumComp);
+					printf("\n                               YOU LOOSE!!!         Computer Won!!!!\n");              
 			        break;
 				}
 				
@@ -104,12 +108,15 @@ int main()
 				num=rand()%10;
 				printf("\nYou: %d , Computrer: %d\n",player,ar[num]);
 				if(player==ar[num]){
-					printf("Computer OUT!!    Player Won!!");
+					printf("Computer OUT!!");
+					printf("\n                         Player runs: %d  Computer runs: %d",SumPlayer,SumComp);
+					printf("\n                                    Congratulations YOU WON!!!          ");
 					break;
 				}
-				SumComp=SumComp+arr[num];
-				if(SumComp>SumPlayer){
-					printf("Computer Won!!!!\n");              //to check the runs by computer and the player
+				SumComp=SumComp+ar[num];
+				if(SumComp>SumPlayer){               //to check the runs by computer and the player
+						printf("\n                         Player runs: %d  Computer runs: %d",SumPlayer,SumComp);
+					printf("\n                               YOU LOOSE!!!         Computer Won!!!!\n");            
 			        break;
 				}
 				
@@ -121,13 +128,17 @@ int main()
 			printf("                                          PLAYING ODD EVEN GAME...\nYour turn is to bat\n");
 			while(1)
 			{
-				printf("Enter a number from (1,2,3,4,5,6,10,20,25,40) ");
+				printf("Enter a number from (1,2,3,4,5,6,10,20,25,40)");
 				scanf("%d",&player);
+				if((player>6 && player<10) || (player>10 && player<20) || (player>20 && player<25) || (player>25 && player<40) || (player>40)){
+					printf("*Invalid input*\n");
+					continue;
+				}
 				srand(time(NULL));
 				num=rand()%10;
 				printf("\nYou: %d , Computer: %d\n",player,arr[num]);
 				if(player==arr[num]){                     // if number output by computer == number input by player then OUT!!
-					printf("YOU ARE OUT\n");
+					printf("YOU ARE OUT!!\n");
 					break;
 				}
 				SumPlayer=SumPlayer+player;                   //to sum the runs of player
@@ -138,16 +149,20 @@ int main()
 				{
 				printf("Enter a number from (1,2,3,4,5,10,20,25,40)");
 				scanf("%d",&player);
+				if((player>6 && player<10) || (player>10 && player<20) || (player>20 && player<25) || (player>25 && player<40) || (player>40)){
+					printf("*Invalid input*\n");
+					continue;
+				}
 				srand(time(NULL));
 				num=rand()%10;
 				printf("\nYou: %d , Computrer: %d\n",player,arr[num]);
 				if(player==arr[num]){
-					printf("Computer OUT!!    Player Won!!");
+					printf("Computer OUT!!                \n                  Player runs: %d Computer runs: %d  \n         Player Won!!",SumPlayer,SumComp);
 					break;
 				}
 				SumComp=SumComp+arr[num];
 				if(SumComp>SumPlayer){
-					printf("Computer Won!!!!\n");              //to check the runs by computer and the player
+					printf("\n                                Player runs: %d Computer runs: %d  \n                            Computer Won!!!!\n");              //to check the runs by computer and the player
 			        break;
 				}
 				
@@ -171,14 +186,6 @@ int main()
 			
 			
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
