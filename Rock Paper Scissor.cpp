@@ -1,0 +1,82 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<time.h>
+
+//  YOUTUBE: The Adarsh 1M
+
+int  main()
+{
+	int num,choice;
+			printf("				------------------------------------------\n");
+        	printf("					Rock Paper Scissor Game\n");
+			printf("				------------------------------------------\n");
+			printf("\nEnter '1' for ROCK\nEnter '2' for PAPER\nEnter '3' for Scissor\n <TO QUIT THE GAME ENTER '4' or above>\n");
+	while(1){
+		printf("\n					ROCK(1)...PAPER(2)....SCISSOR(3)...");
+	
+		scanf("%d",&choice);
+		if(choice > 3){
+			printf("\n					THANKYOU FOR PLAYING\n					YOUTUBE: The Adarsh 1M");
+		    break;
+		}
+		srand(time(NULL));
+		num=rand()%3+1;
+		
+		
+		if(choice==1){
+			printf("\n\n				You: ROCK");
+		}
+		else if(choice==2){
+			printf("\n\n				You: PAPER");
+		}
+		else if(choice==3){
+			printf("\n\n				You: SCISSOR");
+		}
+		
+		if(num==1){
+			printf("		Computer: ROCK");
+		}
+		else if(num==2){
+			printf("		Computer: PAPER");
+		}
+		else if(num==3){
+			printf("		Computer: SCISSOR");
+		}
+		
+		printf("\n");
+		
+		if(choice==num){
+			printf("\n				    	Ohh! its a draw!!\n");
+		}
+		else if(choice == 1 && num == 2){
+			printf("\n				   	  COMPUTER WON!!!\n");
+		}
+		else if(choice == 1 && num == 3){
+			printf("\n					  YOU WON!!!\n");
+		}
+		else if(choice == 2 && num == 1){
+			printf("\n					  YOU WON!!!\n");
+		}
+	    else if(choice == 2 && num == 3){
+	    	printf("\n					  COMPUTER WON!!!\n");
+		}
+		else if(choice == 3 && num == 1){
+			printf("\n					  COMPUTER WON!!!\n");
+		}
+		else if(choice == 3 && num == 2){
+			printf("\n					  YOU WON!!!\n");
+		}
+		printf("\n...--------------------------------------------------------------------------------...\n\n\n");
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	return 0;
+}
